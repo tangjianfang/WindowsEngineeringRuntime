@@ -14,8 +14,8 @@
 |-------|------|------|------|
 | Phase 0 | 项目立项 | Project Charter / Vision / Roadmap | 进行中 |
 | Phase 1 | Problem Definition | PS-0001 / User Story / Pain Points / Daily Workflow | 未开始 |
-| Phase 2 | Research | Claude Code / Cursor / Codex CLI / Gemini CLI / Copilot / MCP / Plugin / Workflow / Agent / Skill | 未开始 |
-| Phase 3 | Architecture | Kernel / Capability / Context / Workflow / Agent / Event Bus / Memory / Provider | 未开始 |
+| Phase 2 | Research | Claude Code / Cursor / Codex CLI / Gemini CLI / Copilot / MCP / Plugin / Workflow / Agent / Skill | 进行中（Gemini CLI / Copilot / Workflow 待补） |
+| Phase 3 | Architecture | Kernel / Capability / Context / Workflow / Agent / Event Bus / Memory / Provider | 进行中（RFC-0001 已起草） |
 | Phase 4 | Prototype | 最小 Runtime / 最小 Capability / 最小 Workflow | 未开始 |
 | Phase 5 | Reference Implementation | C++20 Windows Native MVP | 未开始 |
 

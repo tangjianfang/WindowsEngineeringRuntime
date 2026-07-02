@@ -12,6 +12,8 @@
 - `MCP/` — Model Context Protocol 调研
 - `A2A/` — Agent-to-Agent 调研
 - `Agent/` — Agent 通用机制调研
+- `Skill/` — Skill（技能包）调研
+- `Plugin/` — Plugin（插件）机制调研
 
 ## 命名规范
 
