@@ -5,7 +5,6 @@
 > Last Updated: 2026-07-02
 >
 > Status: Draft
-
 ---
 
 # 1. 项目目标
@@ -139,6 +138,13 @@ WindowsEngineeringRuntime/
 │
 ├── docs/
 │
+│   ├── _templates/
+│   │
+│   │   PS_Template.md
+│   │   RFC_Template.md
+│   │   ADR_Template.md
+│   │   EXP_Template.md
+│   │
 │   ├── 00_Project/
 │   │
 │   │   Project_Charter.md
@@ -158,6 +164,7 @@ WindowsEngineeringRuntime/
 │   │   Cursor/
 │   │   CodexCLI/
 │   │   MCP/
+│   │   A2A/
 │   │   Agent/
 │   │
 │   ├── 03_Architecture/
@@ -175,11 +182,13 @@ WindowsEngineeringRuntime/
 │   │   Agent/
 │   │   Memory/
 │   │   EventBus/
+│   │   Provider/
 │   │
 │   ├── 05_SDK/
 │   │
 │   │   CapabilitySDK.md
 │   │   ProviderSDK.md
+│   │   WorkflowSDK.md
 │   │   PluginSDK.md
 │   │
 │   ├── 06_Reference/
@@ -345,7 +354,9 @@ Books
 
 # 5. 文档类型
 
-本项目统一采用五种文档。
+本项目统一采用五种核心文档（Project Charter / Problem Statement / RFC / ADR / Prototype）。
+
+此外，`02_Research` 下的 Research 笔记为辅助文档，不计入五种核心文档，命名规范见第 6 节。
 
 ---
 
@@ -456,6 +467,39 @@ Cursor_Architecture.md
 
 MCP_Research.md
 ```
+
+---
+
+# 6.1 文档状态机
+
+每一份文档头部必须标注 `Status` 字段，取值范围如下：
+
+```
+Draft        草稿，正在编写
+Review       评审中
+Accepted     已达成共识（ADR 常用）
+Superseded   已被新文档取代
+Archived     已归档（移入 99_Archive）
+```
+
+状态流转：
+
+```
+Draft → Review → Accepted → Superseded/Archived
+```
+
+任何文档不得跳过 Review 直接进入 Accepted。
+
+---
+
+# 6.2 交叉引用规范
+
+为保证"每一个架构决策都必须可追溯"，规定：
+
+1. 每一个 RFC / ADR 头部必须标注 `Relates-To: PS-XXXX`，引用其解决的 Problem。
+2. 每一个 ADR 若由某个 RFC 升级而来，必须标注 `Derived-From: RFC-XXXX`。
+3. 每一个 Prototype（EXP）必须标注其验证的 `RFC-XXXX` 或 `ADR-XXXX`。
+4. 被取代的文档必须标注 `Superseded-By: <新文档编号>`。
 
 ---
 
@@ -590,6 +634,8 @@ Capability
 Context
 
 Workflow
+
+Agent
 
 Event Bus
 
